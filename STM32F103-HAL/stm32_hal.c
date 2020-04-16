@@ -130,3 +130,23 @@ void setGPIOBitHigh(int port,int pin){
 	}
 }
 
+bool readGPIOBit(int port,int pin){
+	switch(port){
+		case Peripheral_GPIOA:
+			return (GPIOA->IDR & (1 << pin))==0? 0:1;
+		case Peripheral_GPIOB:
+			return (GPIOB->IDR & (1 << pin))==0? 0:1;
+		case Peripheral_GPIOC:
+			return (GPIOC->IDR & (1 << pin))==0? 0:1;
+		case Peripheral_GPIOD:
+			return (GPIOD->IDR & (1 << pin))==0? 0:1;
+		case Peripheral_GPIOE:
+			return (GPIOE->IDR & (1 << pin))==0? 0:1;
+		case Peripheral_GPIOF:
+			return (GPIOF->IDR & (1 << pin))==0? 0:1;
+		case Peripheral_GPIOG:
+			return (GPIOG->IDR & (1 << pin))==0? 0:1;
+		default:
+			break;
+	}
+}
