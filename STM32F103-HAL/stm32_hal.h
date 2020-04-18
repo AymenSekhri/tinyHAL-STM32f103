@@ -82,7 +82,10 @@
 #define USART_CONF_RE			(1<<2)
 
 #define USART_STAT_TC			(1<<6)
+#define USART_STAT_RXNE			(1<<5)
 
+#define USART_MODE_RECEIVE				1
+#define USART_MODE_TRANSMIT				2
 
 
 
@@ -93,7 +96,7 @@ void setGPIOBit(int port,int pin,bool value);
 void setGPIOBitLow(int port,int pin);
 void setGPIOBitHigh(int port,int pin);
 bool readGPIOBit(int port,int pin);
-void USARTInitiate(int port, int buad);
+void USARTInitiate(int port, int baud, int mode);
 void USARTSendByte(int port, char value);
 void USARTSendStream(int port, char* data, int length);
 void USARTSendString(int port, char* data);
