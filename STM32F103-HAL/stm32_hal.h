@@ -100,3 +100,4 @@ void USARTInitiate(int port, int baud, int mode);
 void USARTSendByte(int port, char value);
 void USARTSendStream(int port, char* data, int length);
 void USARTSendString(int port, char* data);
+char USARTReadByte(int port);
