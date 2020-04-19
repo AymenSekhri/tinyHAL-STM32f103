@@ -1,4 +1,4 @@
-#include "stm32f103_hal\stm32f103_hal_interface.h"
+#include "tinyHAL/stm32f103_hal.h"
 
 int main(){
 	enablePeripheralClock(Peripheral_GPIOC);
