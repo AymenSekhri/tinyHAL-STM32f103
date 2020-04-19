@@ -8,6 +8,7 @@
 
 #define USART3_CONF_TX_PIN		10		//PB10
 #define USART3_CONF_RX_PIN		11		//PB11
+
 #define USART_CONF_UE			(1<<13)
 #define USART_CONF_TE			(1<<3)
 #define USART_CONF_RE			(1<<2)

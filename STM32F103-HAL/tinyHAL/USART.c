@@ -37,13 +37,13 @@ void USARTInitiate(int port, int baud, int mode){
 			break;
 		case Peripheral_USART3:
 			enablePeripheralClock(Peripheral_USART3);
-			enablePeripheralClock(Peripheral_GPIOA);
+			enablePeripheralClock(Peripheral_GPIOB);
 			if(mode == USART_MODE_RECEIVE){
-				configureGPIO(Peripheral_GPIOA, USART3_CONF_RX_PIN, GPIO_MODE_OUT_50MHZ, GPIO_CONF_OUT_ALT_PUSHPULL);
+				configureGPIO(Peripheral_GPIOB, USART3_CONF_RX_PIN, GPIO_MODE_OUT_50MHZ, GPIO_CONF_OUT_ALT_PUSHPULL);
 				USART3->CR1 |= USART_CONF_RE;
 			}	
 			if(mode == USART_MODE_TRANSMIT){
-				configureGPIO(Peripheral_GPIOA, USART3_CONF_TX_PIN, GPIO_MODE_OUT_50MHZ, GPIO_CONF_OUT_ALT_PUSHPULL);
+				configureGPIO(Peripheral_GPIOB, USART3_CONF_TX_PIN, GPIO_MODE_OUT_50MHZ, GPIO_CONF_OUT_ALT_PUSHPULL);
 				USART3->CR1 |= USART_CONF_TE;
 			}
 			USART3->BRR  = baud;
