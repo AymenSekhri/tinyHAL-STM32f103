@@ -13,3 +13,10 @@ int fputc(int c, FILE *f) {
 int fgetc(FILE *f) {
 	return USARTReadByte(Peripheral_USART1);
 }
+
+int max(int a, int b){
+	if (a>b)
+		return a;
+	else
+		return b;
+}

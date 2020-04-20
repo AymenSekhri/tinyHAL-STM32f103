@@ -2,3 +2,4 @@
 #include "GPIO.h"
 #include "USART.h"
 #include "hal_stdio.h"
+#include "timer.h"

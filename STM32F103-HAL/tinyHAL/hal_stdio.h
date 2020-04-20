@@ -7,3 +7,5 @@
 
 int fputc(int c, FILE *f);
 int fgetc(FILE *f);
+
+int max(int a, int b);
