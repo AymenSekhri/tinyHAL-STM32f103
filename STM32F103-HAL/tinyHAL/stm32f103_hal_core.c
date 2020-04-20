@@ -21,6 +21,21 @@ void enablePeripheralClock(int peripheral){
 	}
 }
 
+void disablePeripheralClock(int peripheral){
+	int configurationBitmask = ~(1 << LOWERWORD(peripheral));
+	switch(UPPERWORD(peripheral)){
+		case BUS_AHB:
+			RCC->AHBENR &= configurationBitmask;
+			break;
+		case BUS_APB1:
+			RCC->APB1ENR &= configurationBitmask;
+			break;
+		case BUS_APB2:
+			RCC->APB2ENR &= configurationBitmask;
+			break;
+	}
+}
+
 void configureGPIO(int port,int pin,int mode,int configuration){
 	bool isLowerPort = pin<8?true:false;
 	int configurationBitmask = 0;
