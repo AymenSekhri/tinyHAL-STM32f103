@@ -10,7 +10,7 @@
 #define TIMER_STAT_UIF 			(1 << 0)
 
 
+static void delayMilliseconds(int milliseconds);
+
 void initiateTimer(int timerID);
 void delay(int milliseconds);
-void delayMilliseconds(int milliseconds);
-

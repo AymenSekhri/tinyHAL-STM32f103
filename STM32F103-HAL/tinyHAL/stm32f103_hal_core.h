@@ -70,10 +70,6 @@
 #define GPIO_MODE_OUT_50MHZ						3
 
 
-
-
-
-
 void enablePeripheralClock(int peripheral);
 void disablePeripheralClock(int peripheral);
 void configureGPIO(int port,int pin,int mode,int configuration);
