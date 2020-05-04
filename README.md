@@ -4,10 +4,10 @@
 - [x] GPIO
 - [X] UART
 - [X] Timers
-- [ ] Interrupts
+- [X] Interrupts
+- [X] ADC
 - [ ] SPI
 - [ ] I2C
-- [ ] ADC
 - [ ] LCD
 ## Environment
  The source code is compiled using **Keil uVision 5** IDE, I chose it because of it gread debugging tools. Though, you can use any compiler/IDE since the code is bare metal, it doesn't depend on any HAL, except `stm32f10x.h` header which contains the structures and address of all stmf103 configuration registers, you can find it online.
