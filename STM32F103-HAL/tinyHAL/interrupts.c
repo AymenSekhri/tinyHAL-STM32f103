@@ -3,7 +3,7 @@
 
 void enableIRQ(int irq, int priority){
 	__COMPILER_BARRIER();
-	NVIC->IP[irq]	|= priority << 4;
+	NVIC->IP[irq]	|= (priority & 0xF) << 4;
 	NVIC->ISER[irq>>5] |= (1 << (irq&0x1F));
 }
 
