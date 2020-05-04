@@ -13,4 +13,5 @@
 static void delayMilliseconds(int milliseconds);
 
 void initiateTimer(int timerID);
+void destroyTimer(int timerID);
 void delay(int milliseconds);

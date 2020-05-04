@@ -3,6 +3,10 @@ void initiateTimer(int timerID){
 	enablePeripheralClock(timerID);
 }
 
+void destroyTimer(int timerID){
+	disablePeripheralClock(timerID);
+}
+
 void delay(int milliseconds){// Uses Timer2 in 72MHz
 	int iterationsNumber = milliseconds / 1000 + (milliseconds%1000 != 0);
 	for(int i=0; i<iterationsNumber; i++){
